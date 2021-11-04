@@ -163,8 +163,6 @@ class Carousel extends BaseComponent {
   }
 
   to(index) {
-    const activeIndex = this._getItemIndex(this._getActive())
-
     if (index > this._getItems().length - 1 || index < 0) {
       return
     }
@@ -174,6 +172,7 @@ class Carousel extends BaseComponent {
       return
     }
 
+    const activeIndex = this._getItemIndex(this._getActive())
     if (activeIndex === index) {
       this.pause()
       this.cycle()
@@ -265,10 +264,6 @@ class Carousel extends BaseComponent {
     return this._getItems().indexOf(element)
   }
 
-  _getNextOrPreviousItem(getNext, activeElement) {
-    return getNextActiveElement(this._getItems(), activeElement, getNext, this._config.wrap)
-  }
-
   _setActiveIndicatorElement(index) {
     if (!this._indicatorsElement) {
       return
@@ -299,14 +294,14 @@ class Carousel extends BaseComponent {
     this._config.interval = elementInterval || this._config.defaultInterval
   }
 
-  _slide(order, element) {
+  _slide(order, element = null) {
     if (this._isSliding) {
       return
     }
 
     const activeElement = this._getActive()
     const isNext = order === ORDER_NEXT
-    const nextElement = element || this._getNextOrPreviousItem(isNext, activeElement)
+    const nextElement = element || getNextActiveElement(this._getItems(), activeElement, isNext, this._config.wrap)
 
     if (nextElement === activeElement) {
       return
