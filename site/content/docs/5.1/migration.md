@@ -78,10 +78,10 @@ Your custom Bootstrap CSS builds should now look something like this with a sepa
 ## Documentation changes
 
 - Redesigned homepage, docs layout, and footer.
-- Added [new Parcel guide](https://getbootstrap.com/docs/5.1/getting-started/parcel/).
-- Added [new Customize section](https://getbootstrap.com/docs/5.1/customize/overview/), replacing [v4's Theming page](https://getbootstrap.com/docs/4.6/getting-started/theming/), with new details on Sass, global configuration options, color schemes, CSS variables, and more.
-- Reorganized all form documentation into [new Forms section](https://getbootstrap.com/docs/5.1/forms/overview/), breaking apart the content into more focused pages.
-- Similarly, updated [the Layout section](https://getbootstrap.com/docs/5.1/layout/breakpoints/), to flesh out grid content more clearly.
+- Added [new Parcel guide]({{< docsref "/getting-started/parcel" >}}).
+- Added [new Customize section]({{< docsref "/customize/overview" >}}), replacing [v4's Theming page](https://getbootstrap.com/docs/4.6/getting-started/theming/), with new details on Sass, global configuration options, color schemes, CSS variables, and more.
+- Reorganized all form documentation into [new Forms section]({{< docsref "/forms/overview" >}}), breaking apart the content into more focused pages.
+- Similarly, updated [the Layout section]({{< docsref "/layout/breakpoints" >}}), to flesh out grid content more clearly.
 - Renamed "Navs" component page to "Navs & Tabs".
 - Renamed "Checks" page to "Checks & radios".
 - Redesigned the navbar and added a new subnav to make it easier to get around our sites and docs versions.
@@ -140,7 +140,7 @@ Your custom Bootstrap CSS builds should now look something like this with a sepa
 - **New breakpoint!** Added new `xxl` breakpoint for `1400px` and up. No changes to all other breakpoints.
 
 - **Improved gutters.** Gutters are now set in rems, and are narrower than v4 (`1.5rem`, or about `24px`, down from `30px`). This aligns our grid system's gutters with our spacing utilities.
-  - Added new [gutter class](https://getbootstrap.com/docs/5.1/layout/gutters/) (`.g-*`, `.gx-*`, and `.gy-*`) to control horizontal/vertical gutters, horizontal gutters, and vertical gutters.
+  - Added new [gutter class]({{< docsref "/layout/gutters" >}}) (`.g-*`, `.gx-*`, and `.gy-*`) to control horizontal/vertical gutters, horizontal gutters, and vertical gutters.
   - <span class="badge bg-danger">Breaking</span> Renamed `.no-gutters` to `.g-0` to match new gutter utilities.
 
 - Columns no longer have `position: relative` applied, so you may have to add `.position-relative` to some elements to restore that behavior.
@@ -251,9 +251,9 @@ Your custom Bootstrap CSS builds should now look something like this with a sepa
 
 ### Buttons
 
-- <span class="badge bg-danger">Breaking</span> **[Toggle buttons](https://getbootstrap.com/docs/5.1/forms/checks-radios/#toggle-buttons), with checkboxes or radios, no longer require JavaScript and have new markup.** We no longer require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [See #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
+- <span class="badge bg-danger">Breaking</span> **[Toggle buttons]({{< docsref "/forms/checks-radios#toggle-buttons" >}}), with checkboxes or radios, no longer require JavaScript and have new markup.** We no longer require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [See #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
 
-- <span class="badge bg-danger">Breaking</span> **Dropped `.btn-block` for utilities.** Instead of using `.btn-block` on the `.btn`, wrap your buttons with `.d-grid` and a `.gap-*` utility to space them as needed. Switch to responsive classes for even more control over them. [Read the docs for some examples.](https://getbootstrap.com/docs/5.1/components/buttons/#block-buttons)
+- <span class="badge bg-danger">Breaking</span> **Dropped `.btn-block` for utilities.** Instead of using `.btn-block` on the `.btn`, wrap your buttons with `.d-grid` and a `.gap-*` utility to space them as needed. Switch to responsive classes for even more control over them. [Read the docs for some examples.]({{< docsref "/components/buttons#block-buttons" >}})
 
 - Updated our `button-variant()` and `button-outline-variant()` mixins to support additional parameters.
 
@@ -297,7 +297,7 @@ Your custom Bootstrap CSS builds should now look something like this with a sepa
 
 - <span class="badge bg-danger">Breaking</span> All the events for the dropdown are now triggered on the dropdown toggle button and then bubbled up to the parent element.
 
-- Dropdown menus now have a `data-bs-popper="static"` attribute set when the positioning of the dropdown is static and `data-bs-popper="none"` when dropdown is in the navbar. This is added by our JavaScript and helps us use custom position styles without interfering with Popper's positioning.
+- Dropdown menus now have a `data-bs-popper="static"` attribute set when the positioning of the dropdown is static, or dropdown is in the navbar. This is added by our JavaScript and helps us use custom position styles without interfering with Popper's positioning.
 
 - <span class="badge bg-danger">Breaking</span> Dropped `flip` option for dropdown plugin in favor of native Popper configuration. You can now disable the flipping behavior by passing an empty array for [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) option in [flip](https://popper.js.org/docs/v2/modifiers/flip/) modifier.
 
@@ -307,7 +307,7 @@ Your custom Bootstrap CSS builds should now look something like this with a sepa
 
 ### Jumbotron
 
-- <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. [See our new Jumbotron example for a demo.](https://getbootstrap.com/docs/5.1/examples/jumbotron/)
+- <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. [See our new Jumbotron example for a demo.]({{< docsref "/examples/jumbotron" >}})
 
 ### List group
 
