@@ -328,7 +328,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 {{< callout warning >}}
 **Deprecated Options**
 
-Up until v5.1 we [were using]({{< docsref "/components/scrollspy#options" >}}) `offset` & `method` options, that are now deprecated and replaced by `rootMargin`.
+Up until v5.1 we were using `offset` & `method` options, that are now deprecated and replaced by `rootMargin`.
 To keep backwards compatibility, we will continue to parse given `offset` to `rootMargin`, but this feature will be removed in **v6**.
 {{< /callout >}}
 
